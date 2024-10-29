@@ -671,7 +671,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 71095740e635ddf498d64c03ad2de0cb, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 15f5699e74fd2434193f399d47b14d57, type: 2}
+      objectReference: {fileID: 2100000, guid: 826f18748e9583942bff656eae65b89a, type: 2}
     - target: {fileID: 919132149155446097, guid: 71095740e635ddf498d64c03ad2de0cb, type: 3}
       propertyPath: m_Name
       value: Heart
@@ -1542,6 +1542,7 @@ MonoBehaviour:
   - {fileID: 2100000, guid: a6ce15637ab00eb4cb0844959672bd0e, type: 2}
   - {fileID: 2100000, guid: 218d1c62d985ba4458e36d724da00e00, type: 2}
   - {fileID: 2100000, guid: 51c403f255200ec488275b2305922997, type: 2}
+  - {fileID: 2100000, guid: 7db3fc764deda924ca13ecd22ed91fdf, type: 2}
   - {fileID: 2100000, guid: 836e7a77a5891834994025f622fff1b2, type: 2}
   x: 0
 --- !u!1 &1209579401 stripped

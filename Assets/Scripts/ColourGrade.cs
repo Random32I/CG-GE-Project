@@ -2,7 +2,7 @@ using UnityEngine;
 public class ColourGrade : MonoBehaviour
 {
     //public Shader awesomeShader = null;
-    public Material[] whichLut = new Material[4];
+    public Material[] whichLut = new Material[5];
     public int x = 0;
     void OnRenderImage(RenderTexture source, RenderTexture destination)
     {
@@ -11,7 +11,7 @@ public class ColourGrade : MonoBehaviour
 
     public void SwitchLut()
     {
-        if (x == 3)
+        if (x == 4)
         {
             x = 0;
         }
