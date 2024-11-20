@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] int enemiesInLevel;
     [SerializeField] int enemiesKilled;
     [SerializeField] float exp;
+    [SerializeField] List<Enemy> enemies;
 
     // Start is called before the first frame update
     void Start()
@@ -20,5 +21,18 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void SubscribeToAggro(Enemy instance)
+    {
+        enemies.Add(instance);
+    }
+
+    public void NotifyAggro()
+    {
+        foreach (Enemy enemy in enemies)
+        {
+            enemy.Aggravate();
+        }
     }
 }

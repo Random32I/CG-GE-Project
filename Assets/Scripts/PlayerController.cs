@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour
         rig.velocity = new Vector3(Input.GetAxis("Horizontal") * speed, rig.velocity.y, Input.GetAxis("Vertical") * speed);
         if (Input.GetKeyDown(KeyCode.E))
         {
-            bullet.Attack(1, false, transform.forward * 5, transform.position);
+            bullet.AttackArrow(1, false, transform.forward * 5, transform.position);
         }
     }
 

@@ -6,6 +6,7 @@ public class Weapon : MonoBehaviour
 {
     bool hurtPlayer;
     float timeSpawned;
+    int damage;
 
     // Start is called before the first frame update
     void Start()
@@ -22,20 +23,26 @@ public class Weapon : MonoBehaviour
         }
     }
 
-    public void Attack(int damage, bool hurtPlayer, Vector3 velocity, Vector3 startPos)
+    public bool GetHurtPlayer()
+    {
+        return hurtPlayer;
+    }
+
+    public void AttackArrow(int damage, bool hurtPlayer, Vector3 velocity, Vector3 startPos)
     {
         GameObject newBullet = Instantiate(gameObject);
         newBullet.name = "Arrow";
         newBullet.transform.position = startPos;
         newBullet.GetComponent<Rigidbody>().velocity = velocity;
         newBullet.GetComponent<Weapon>().hurtPlayer = hurtPlayer;
+        newBullet.GetComponent<Weapon>().damage = damage;
     }
 
     private void OnTriggerEnter(Collider collision)
     {
         if (collision.name == "Enemy" && hurtPlayer == false)
         {
-            Destroy(gameObject);
+            collision.GetComponent<Enemy>().DoDamage(damage);
         }
         else if (collision.name == "Player" && hurtPlayer == true)
         {
