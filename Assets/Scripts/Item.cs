@@ -5,7 +5,7 @@ using UnityEngine;
 public class Item : MonoBehaviour
 {
     [SerializeField] GameManager game;
-    int itemID;
+    [SerializeField] int itemID;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +24,7 @@ public class Item : MonoBehaviour
         if (other.name == "Player")
         {
             game.PickUpItem(itemID);
+            Destroy(gameObject);
         }
     }
 }

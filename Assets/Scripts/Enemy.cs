@@ -8,6 +8,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] GameManager game;
     int health;
     int enemyID;
+    float exp;
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +19,13 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+    }
+
+    public void InitEnemy(int newHealth, int ID, float newExp)
+    {
+        health = newHealth;
+        enemyID = ID;
+        exp = newExp;
     }
 
     public void Aggravate()
