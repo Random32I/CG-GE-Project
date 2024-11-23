@@ -21,11 +21,12 @@ public class Enemy : MonoBehaviour
     {
     }
 
-    public void InitEnemy(int newHealth, int ID, float newExp)
+    public void InitEnemy(int newHealth, int ID, float newExp, Vector3 startPos)
     {
         health = newHealth;
         enemyID = ID;
         exp = newExp;
+        transform.position = startPos;
     }
 
     public void Aggravate()

@@ -7,6 +7,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] Rigidbody rig;
     [SerializeField] float speed;
     [SerializeField] Weapon bullet;
+    [SerializeField] ItemSpawner spawner;
+    [SerializeField] GameManager game;
 
 
     // Start is called before the first frame update
@@ -21,7 +23,12 @@ public class PlayerController : MonoBehaviour
         rig.velocity = new Vector3(Input.GetAxis("Horizontal") * speed, rig.velocity.y, Input.GetAxis("Vertical") * speed);
         if (Input.GetKeyDown(KeyCode.E))
         {
-            bullet.AttackArrow(1, false, transform.forward * 5, transform.position);
+            if (game.GetNumberOfItemByID(1) > 0)
+            {
+                bullet.AttackArrow(1, false, (transform.right * -1).normalized * 10, transform.position);
+                spawner.SpawnArrow();
+                game.RemoveItemFromInventory(1);
+            }
         }
     }
 

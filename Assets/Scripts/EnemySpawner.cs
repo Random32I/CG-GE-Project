@@ -4,16 +4,19 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    [SerializeField] GameObject instantiableEnemy;
+    [SerializeField] GameObject instantiableBun;
+    [SerializeField] GameObject instantiableWizard;
     GameObject[] enemies = new GameObject[30];
+    int enemyIndex;
+    int activeEnemies;
 
     // Start is called before the first frame update
     void Start()
     {
         for (int i = 0; i < 30; i++)
         {
-            enemies[i] = Instantiate(instantiableEnemy);
-            enemies[i].GetComponent<Enemy>().InitEnemy(Random.Range(1,4), Random.Range(0, 2), Random.Range(0, 10));
+            if (i < 15) enemies[i] = Instantiate(instantiableBun);
+            else if (i >= 15) enemies[i] = Instantiate(instantiableWizard);
             enemies[i].name = "Enemy";
             enemies[i].transform.parent = transform;
         }
@@ -22,6 +25,21 @@ public class EnemySpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (activeEnemies < 5)
+        {
+            SpawnEnemy();
+        }
+    }
+
+    void SpawnEnemy()
+    {
+        int enemyID;
+        if (Random.Range(0, 2) == 1) enemyID = Random.Range(0, 2); else enemyID = 0;
+
+        enemies[enemyIndex + enemyID * 15].GetComponent<Enemy>().InitEnemy(Random.Range(1, 4), enemyID, Random.Range(0, 10), new Vector3(Random.Range(-44f, 44f), 1.5f + enemyID * 0.6f, Random.Range(-43f,44f)));
+        enemies[enemyIndex + enemyID * 15].SetActive(true);
+        enemyIndex++;
+        if (enemyIndex == 15) enemyIndex = 0;
+        activeEnemies++;
     }
 }
