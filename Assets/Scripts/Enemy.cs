@@ -7,6 +7,7 @@ public class Enemy : MonoBehaviour
     bool mad;
     [SerializeField] GameManager game;
     int health;
+    int enemyID;
 
     // Start is called before the first frame update
     void Start()

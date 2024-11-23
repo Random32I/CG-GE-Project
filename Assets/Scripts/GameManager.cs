@@ -5,7 +5,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] float health;
-    [SerializeField] int[] inventory = new int[4]; //stores item ids
+    [SerializeField] List<int> inventory; //stores item ids
     [SerializeField] int enemiesInLevel;
     [SerializeField] int enemiesKilled;
     [SerializeField] float exp;
@@ -34,5 +34,10 @@ public class GameManager : MonoBehaviour
         {
             enemy.Aggravate();
         }
+    }
+
+    public void PickUpItem(int ID)
+    {
+        inventory.Add(ID);
     }
 }
