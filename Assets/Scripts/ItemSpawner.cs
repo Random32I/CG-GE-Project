@@ -20,11 +20,7 @@ public class ItemSpawner : MonoBehaviour
         for(int i = 0; i < 3; i++)
         {
             items[i] = Instantiate(instantiableItem);
-            items[i].transform.parent = transform;
         }
-        SpawnHeart();
-        SpawnArrow();
-        SpawnSword();
     }
 
     // Update is called once per frame
@@ -40,7 +36,7 @@ public class ItemSpawner : MonoBehaviour
         {
             if (!items[itemIndex].GetComponent<Item>().usedItem)
             {
-                items[itemIndex].GetComponent<Item>().ItemInit(0, meshes[0], materials[0], new Vector3(-15, 2, -1), Vector3.one * 100);
+                items[itemIndex].GetComponent<Item>().ItemInit(0, meshes[0], materials[0], transform.position + Vector3.forward * 3 + Vector3.up * 1.5f, Vector3.one * 100);
                 itemIndex++;
                 if (itemIndex == 3) itemIndex = 0;
                 break;
@@ -55,7 +51,7 @@ public class ItemSpawner : MonoBehaviour
         {
             if (!items[itemIndex].GetComponent<Item>().usedItem)
             {
-                items[itemIndex].GetComponent<Item>().ItemInit(1, meshes[1], materials[1], new Vector3(-3, 2, -30), Vector3.one * 15);
+                items[itemIndex].GetComponent<Item>().ItemInit(1, meshes[1], materials[1], transform.position + Vector3.forward * 3 + Vector3.up * 1.5f, Vector3.one * 15);
                 itemIndex++;
                 if (itemIndex == 3) itemIndex = 0;
                 break;
@@ -70,13 +66,36 @@ public class ItemSpawner : MonoBehaviour
         {
             if (!items[itemIndex].GetComponent<Item>().usedItem)
             {
-                items[itemIndex].GetComponent<Item>().ItemInit(2, meshes[2], materials[2], new Vector3(11, 2, -29),Vector3.one * 20);
+                items[itemIndex].GetComponent<Item>().ItemInit(2, meshes[2], materials[2], transform.position + Vector3.forward * 3 + Vector3.up * 1.5f, Vector3.one * 20);
                 itemIndex++;
                 if (itemIndex == 3) itemIndex = 0;
                 break;
             }
             itemIndex++;
             if (itemIndex == 3) itemIndex = 0;
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.name == "Player")
+        {
+            if (game.GetNumberOfItemByID(2) == 0)
+            {
+                SpawnSword();
+            }
+            else
+            {
+                switch (Random.Range(0, 2))
+                {
+                    case 0:
+                        SpawnHeart();
+                        break;
+                    case 1:
+                        SpawnArrow();
+                        break;
+                }
+            }
         }
     }
 }

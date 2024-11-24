@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] Weapon bullet;
     [SerializeField] ItemSpawner spawner;
     [SerializeField] GameManager game;
+    [SerializeField] GameObject sword;
 
 
     // Start is called before the first frame update
@@ -26,9 +27,28 @@ public class PlayerController : MonoBehaviour
             if (game.GetNumberOfItemByID(1) > 0)
             {
                 bullet.AttackArrow(1, false, (transform.right * -1).normalized * 10, transform.position);
-                spawner.SpawnArrow();
                 game.RemoveItemFromInventory(1);
             }
+        }
+        if (game.GetNumberOfItemByID(2) == 1)
+        {
+            sword.SetActive(Input.GetMouseButton(0));
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.transform.tag == "Bun")
+        {
+            game.DoDamage();
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.name == "Enemy")
+        {
+            other.GetComponent<Enemy>().DoDamage(1);
         }
     }
 

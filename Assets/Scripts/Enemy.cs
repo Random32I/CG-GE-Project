@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    bool mad;
+    [SerializeField] bool mad;
     [SerializeField] GameManager game;
-    int health;
+    [SerializeField] int health;
     int enemyID;
     float exp;
 
@@ -42,5 +42,20 @@ public class Enemy : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    public int GetID()
+    {
+        return enemyID;
+    }
+
+    public bool GetMad()
+    {
+        return mad;
+    }
+
+    public float GetExp()
+    {
+        return exp;
     }
 }

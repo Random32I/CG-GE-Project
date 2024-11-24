@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
+    [SerializeField] GameManager game;
     bool hurtPlayer;
     float timeSpawned;
     int damage;
@@ -36,6 +37,7 @@ public class Weapon : MonoBehaviour
         newBullet.GetComponent<Rigidbody>().velocity = velocity;
         newBullet.GetComponent<Weapon>().hurtPlayer = hurtPlayer;
         newBullet.GetComponent<Weapon>().damage = damage;
+        newBullet.transform.rotation = Quaternion.LookRotation(velocity);
     }
 
     private void OnTriggerEnter(Collider collision)
@@ -43,10 +45,11 @@ public class Weapon : MonoBehaviour
         if (collision.name == "Enemy" && hurtPlayer == false)
         {
             collision.GetComponent<Enemy>().DoDamage(damage);
+            Destroy(gameObject);
         }
         else if (collision.name == "Player" && hurtPlayer == true)
         {
-            Destroy(collision.gameObject);
+            game.DoDamage();
             Destroy(gameObject);
         }
     }

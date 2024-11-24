@@ -64,8 +64,16 @@ public class GameManager : MonoBehaviour
 
     public void DoDamage()
     {
-        health--;
-        spawner.SpawnHeart();
+        if (health > 0)
+        {
+            health--;
+            switch (Random.Range(0, 10))
+            {
+                case 9:
+                    spawner.SpawnHeart();
+                    break;
+            }
+        }
     }
 
     public void PickUpItem(int ID)
@@ -76,8 +84,7 @@ public class GameManager : MonoBehaviour
 
     public void IncreaseHealth()
     {
-        maxHealth++;
-        health++;
+        if (health < maxHealth) health++;
     }
 
     public void IncreaseExp(float amount)
