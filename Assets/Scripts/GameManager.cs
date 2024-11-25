@@ -5,6 +5,8 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager Instance { get; private set; }
+
     [Header("General Stats")]
     [SerializeField] float health;
     [SerializeField] float maxHealth;
@@ -22,18 +24,40 @@ public class GameManager : MonoBehaviour
     [Header("Spawner")]
     [SerializeField] ItemSpawner spawner;
 
+    //Dirty Flags
+    bool healthDirty = true;
+    bool expDirty = true;
+    bool arrowsDirty = true;
+
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        
+        if (Instance && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        DontDestroyOnLoad(gameObject);
     }
 
     // Update is called once per frame
     void Update()
     {
-        healthText.text = $"Health: {health}/{maxHealth}";
-        expText.text = $"Exp: {exp}";
-        arrowsText.text = $"Arrows: {inventoryAmount[1]}";
+        if (healthDirty)
+        {
+            healthText.text = $"Health: {health}/{maxHealth}";
+            healthDirty = false;
+        }
+        if (expDirty)
+        {
+            expText.text = $"Exp: {exp}";
+            expDirty = false;
+        }
+        if (arrowsDirty)
+        {
+            arrowsText.text = $"Arrows: {inventoryAmount[1]}";
+            arrowsDirty = false;
+        }
     }
 
     public int GetNumberOfItemByID(int ID)
@@ -43,6 +67,7 @@ public class GameManager : MonoBehaviour
 
     public void RemoveItemFromInventory(int ID)
     {
+        if (ID == 1) arrowsDirty = true;
         if (inventoryAmount[ID] > 0)
         {
             inventoryAmount[ID]--;
@@ -64,6 +89,7 @@ public class GameManager : MonoBehaviour
 
     public void DoDamage()
     {
+        healthDirty = true;
         if (health > 0)
         {
             health--;
@@ -80,15 +106,18 @@ public class GameManager : MonoBehaviour
     {
         inventoryAmount[ID]++;
         if (ID == 0) IncreaseHealth();
+        if (ID == 1) arrowsDirty = true;
     }
 
     public void IncreaseHealth()
     {
+        healthDirty = true;
         if (health < maxHealth) health++;
     }
 
     public void IncreaseExp(float amount)
     {
+        expDirty = true;
         exp += amount;
     }
 }

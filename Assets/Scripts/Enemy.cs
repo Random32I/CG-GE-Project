@@ -40,6 +40,7 @@ public class Enemy : MonoBehaviour
         game.NotifyAggro();
         if (health <= 0)
         {
+            game.IncreaseExp(exp);
             Destroy(gameObject);
         }
     }

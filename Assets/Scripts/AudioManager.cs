@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
+    public static AudioManager Instance { get; private set; }
+
     [SerializeField] AudioSource[] Sounds = new AudioSource[8];
     //0: ArrowShoot
     //1: SwordSwoosh
@@ -15,9 +17,14 @@ public class AudioManager : MonoBehaviour
     //7: EnemyPassive
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        
+        if (Instance && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        DontDestroyOnLoad(gameObject);
     }
 
     // Update is called once per frame
