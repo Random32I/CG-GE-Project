@@ -115,6 +115,12 @@ public class GameManager : MonoBehaviour
         if (health < maxHealth) health++;
     }
 
+    public void SetMaxHealth(int newHealth)
+    {
+        maxHealth = newHealth;
+        healthDirty = true;
+    }
+
     public void IncreaseExp(float amount)
     {
         expDirty = true;

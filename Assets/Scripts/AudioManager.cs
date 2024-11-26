@@ -13,7 +13,7 @@ public class AudioManager : MonoBehaviour
     //3: HeartGet
     //4: ChestOpen
     //5: EnemyAngry
-    //6: AudioSource EnemyDie
+    //6: EnemyDie
     //7: EnemyPassive
 
     // Start is called before the first frame update

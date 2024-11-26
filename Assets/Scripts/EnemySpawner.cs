@@ -9,6 +9,7 @@ public class EnemySpawner : MonoBehaviour
     GameObject[] enemies = new GameObject[30];
     int enemyIndex;
     int activeEnemies;
+    int maxEnemies = 15;
 
     // Start is called before the first frame update
     void Start()
@@ -25,10 +26,12 @@ public class EnemySpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (activeEnemies < 15)
+        if (activeEnemies < maxEnemies)
         {
             SpawnEnemy();
         }
+        GameObject thing = Instantiate(instantiableBun);
+        Destroy(thing);
     }
 
     void SpawnEnemy()
@@ -41,5 +44,10 @@ public class EnemySpawner : MonoBehaviour
         enemyIndex++;
         if (enemyIndex == 15) enemyIndex = 0;
         activeEnemies++;
+    }
+
+    public void SetMaxEnemies(int newAmount)
+    {
+        maxEnemies = newAmount;
     }
 }

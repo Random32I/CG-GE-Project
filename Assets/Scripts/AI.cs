@@ -58,4 +58,9 @@ public class AI : MonoBehaviour
             rig.velocity = (target - transform.position).normalized * speed;
         }
     }
+
+    public void SetSpeed(int newSpeed)
+    {
+        speed = newSpeed;
+    }
 }

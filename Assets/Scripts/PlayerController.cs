@@ -52,4 +52,9 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void SetSpeed(int newSpeed)
+    {
+        speed = newSpeed;
+    }
+
 }
