@@ -30,8 +30,6 @@ public class EnemySpawner : MonoBehaviour
         {
             SpawnEnemy();
         }
-        GameObject thing = Instantiate(instantiableBun);
-        Destroy(thing);
     }
 
     void SpawnEnemy()
