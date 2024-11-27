@@ -197,6 +197,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4a9755ba2d3632a41b9d5c3f15ce4af0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 287619568}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4a9755ba2d3632a41b9d5c3f15ce4af0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 287619572}
   m_SourcePrefab: {fileID: 100100000, guid: 4a9755ba2d3632a41b9d5c3f15ce4af0, type: 3}
 --- !u!1 &25398888
 GameObject:
@@ -545,6 +548,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8eb14294479d8a0458be2e833b054f28, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1351036552}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8eb14294479d8a0458be2e833b054f28, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1351036556}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8eb14294479d8a0458be2e833b054f28, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1351036557}
   m_SourcePrefab: {fileID: 100100000, guid: 8eb14294479d8a0458be2e833b054f28, type: 3}
 --- !u!1 &125787940
 GameObject:
@@ -558,6 +567,7 @@ GameObject:
   - component: {fileID: 125787944}
   - component: {fileID: 125787943}
   - component: {fileID: 125787942}
+  - component: {fileID: 125787945}
   m_Layer: 0
   m_Name: Cube (2)
   m_TagString: Untagged
@@ -651,6 +661,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 125787940}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &125787945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 125787940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dbbe0da930b7f24e9bd6f649a2754e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  texture1: {fileID: 0}
+  texture2: {fileID: 0}
+  useTexture2: 0
 --- !u!1 &172560671
 GameObject:
   m_ObjectHideFlags: 0
@@ -860,6 +885,21 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -5495902117074765545, guid: 4069eaa92bc9d964aa01428b024d0874, type: 3}
+--- !u!114 &218307044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 218307036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dbbe0da930b7f24e9bd6f649a2754e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  texture1: {fileID: 2800000, guid: 827cfe5c406524045bf66998caa24c77, type: 3}
+  texture2: {fileID: 10307, guid: 0000000000000000f000000000000000, type: 0}
+  useTexture2: 0
 --- !u!1 &224704202
 GameObject:
   m_ObjectHideFlags: 0
@@ -1256,6 +1296,21 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 3.8657103, z: 1}
   m_Center: {x: -0, y: 0.02527994, z: 0}
+--- !u!114 &264003115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 264003110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dbbe0da930b7f24e9bd6f649a2754e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  texture1: {fileID: 2800000, guid: 52cfcf44944eb6843849577b18672515, type: 3}
+  texture2: {fileID: 10307, guid: 0000000000000000f000000000000000, type: 0}
+  useTexture2: 0
 --- !u!1 &287619563 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 4a9755ba2d3632a41b9d5c3f15ce4af0, type: 3}
@@ -1305,6 +1360,41 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.060565628, y: 0.07687193, z: 0.06068778}
   m_Center: {x: 7.5620913e-23, y: -0.0000000067203705, z: 0.008009205}
+--- !u!114 &287619572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 287619563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dbbe0da930b7f24e9bd6f649a2754e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  texture1: {fileID: 2800000, guid: f130ebeb5d9c9b640882a4b157054102, type: 3}
+  texture2: {fileID: 10307, guid: 0000000000000000f000000000000000, type: 0}
+  useTexture2: 0
+--- !u!1 &329425518 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: a14820332cc9a5543bf06456b2638be8, type: 3}
+  m_PrefabInstance: {fileID: 958448618}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &329425522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 329425518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dbbe0da930b7f24e9bd6f649a2754e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  texture1: {fileID: 2800000, guid: c62be1954abe62e4b92091824d754cf1, type: 3}
+  texture2: {fileID: 10307, guid: 0000000000000000f000000000000000, type: 0}
+  useTexture2: 0
 --- !u!1 &383032663
 GameObject:
   m_ObjectHideFlags: 0
@@ -2123,7 +2213,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a14820332cc9a5543bf06456b2638be8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1027889786}
   m_SourcePrefab: {fileID: 100100000, guid: a14820332cc9a5543bf06456b2638be8, type: 3}
 --- !u!1001 &596013643
 PrefabInstance:
@@ -2298,6 +2391,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 14e45532b176f1f409646c3b1ec5be01, type: 3}
       insertIndex: -1
       addedObject: {fileID: 264003114}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 14e45532b176f1f409646c3b1ec5be01, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 264003115}
   m_SourcePrefab: {fileID: 100100000, guid: 14e45532b176f1f409646c3b1ec5be01, type: 3}
 --- !u!1 &659048205
 GameObject:
@@ -2503,7 +2599,8 @@ Transform:
   m_LocalPosition: {x: 1, y: -5, z: 5}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_ConstrainProportionsScale: 1
-  m_Children: []
+  m_Children:
+  - {fileID: 788497368}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &691355374
@@ -8012,12 +8109,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 788497365}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 95.58394, y: -10.055958, z: -31.588417}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 691355373}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!1 &844009901
 GameObject:
@@ -8153,6 +8250,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 844009901}
   m_CullTransparentMesh: 1
+--- !u!1 &845268614 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: a14820332cc9a5543bf06456b2638be8, type: 3}
+  m_PrefabInstance: {fileID: 878316649}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &845268618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 845268614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dbbe0da930b7f24e9bd6f649a2754e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  texture1: {fileID: 2800000, guid: c62be1954abe62e4b92091824d754cf1, type: 3}
+  texture2: {fileID: 10307, guid: 0000000000000000f000000000000000, type: 0}
+  useTexture2: 0
 --- !u!1001 &878316649
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8212,7 +8329,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a14820332cc9a5543bf06456b2638be8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 845268618}
   m_SourcePrefab: {fileID: 100100000, guid: a14820332cc9a5543bf06456b2638be8, type: 3}
 --- !u!1 &928485713
 GameObject:
@@ -8482,7 +8602,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a14820332cc9a5543bf06456b2638be8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 329425522}
   m_SourcePrefab: {fileID: 100100000, guid: a14820332cc9a5543bf06456b2638be8, type: 3}
 --- !u!1 &963194225
 GameObject:
@@ -8638,6 +8761,26 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1027889782 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: a14820332cc9a5543bf06456b2638be8, type: 3}
+  m_PrefabInstance: {fileID: 572811147}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1027889786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1027889782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dbbe0da930b7f24e9bd6f649a2754e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  texture1: {fileID: 2800000, guid: c62be1954abe62e4b92091824d754cf1, type: 3}
+  texture2: {fileID: 10307, guid: 0000000000000000f000000000000000, type: 0}
+  useTexture2: 0
 --- !u!1 &1070571272
 GameObject:
   m_ObjectHideFlags: 0
@@ -8995,6 +9138,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9777f500bf3d43e4b8db4acdb7a3b9fe, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1190548797}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9777f500bf3d43e4b8db4acdb7a3b9fe, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1190548800}
   m_SourcePrefab: {fileID: 100100000, guid: 9777f500bf3d43e4b8db4acdb7a3b9fe, type: 3}
 --- !u!1 &1190548790 stripped
 GameObject:
@@ -9086,6 +9232,21 @@ MonoBehaviour:
   player: {fileID: 264003110}
   mage: {fileID: 691355375}
   target: {x: 0, y: 0, z: 0}
+--- !u!114 &1190548800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1190548790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dbbe0da930b7f24e9bd6f649a2754e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  texture1: {fileID: 2800000, guid: a68eab19724207b459ab0ec6d39d9a06, type: 3}
+  texture2: {fileID: 10307, guid: 0000000000000000f000000000000000, type: 0}
+  useTexture2: 0
 --- !u!1 &1209579401 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 1ab14737bdfda514fbd79a8ebed2d12e, type: 3}
@@ -9233,6 +9394,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4069eaa92bc9d964aa01428b024d0874, type: 3}
       insertIndex: -1
       addedObject: {fileID: 218307040}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4069eaa92bc9d964aa01428b024d0874, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 218307044}
   m_SourcePrefab: {fileID: 100100000, guid: 4069eaa92bc9d964aa01428b024d0874, type: 3}
 --- !u!1 &1269473910
 GameObject:
@@ -9518,6 +9682,36 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4887216478360415443, guid: 8eb14294479d8a0458be2e833b054f28, type: 3}
+--- !u!114 &1351036556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1351036548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dbbe0da930b7f24e9bd6f649a2754e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  texture1: {fileID: 2800000, guid: 95d2924314bd91440b122f6ee8815547, type: 3}
+  texture2: {fileID: 10307, guid: 0000000000000000f000000000000000, type: 0}
+  useTexture2: 0
+--- !u!114 &1351036557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1351036548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dbbe0da930b7f24e9bd6f649a2754e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  texture1: {fileID: 2800000, guid: 4316b84df32a8894aa74ef94e1d8ecb1, type: 3}
+  texture2: {fileID: 2800000, guid: 19b8afd1a2365a5489e735b784f1aa0f, type: 3}
+  useTexture2: 0
 --- !u!1 &1360446081
 GameObject:
   m_ObjectHideFlags: 0
@@ -9600,7 +9794,115 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1360446084}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 329425522}
+        m_TargetAssemblyTypeName: TexSwitch, Assembly-CSharp
+        m_MethodName: ChangeThing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1027889786}
+        m_TargetAssemblyTypeName: TexSwitch, Assembly-CSharp
+        m_MethodName: ChangeThing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 845268618}
+        m_TargetAssemblyTypeName: TexSwitch, Assembly-CSharp
+        m_MethodName: ChangeThing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 264003115}
+        m_TargetAssemblyTypeName: TexSwitch, Assembly-CSharp
+        m_MethodName: ChangeThing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 287619572}
+        m_TargetAssemblyTypeName: TexSwitch, Assembly-CSharp
+        m_MethodName: ChangeThing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 218307044}
+        m_TargetAssemblyTypeName: TexSwitch, Assembly-CSharp
+        m_MethodName: ChangeThing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1351036556}
+        m_TargetAssemblyTypeName: TexSwitch, Assembly-CSharp
+        m_MethodName: ChangeThing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1190548800}
+        m_TargetAssemblyTypeName: TexSwitch, Assembly-CSharp
+        m_MethodName: ChangeThing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1969846316}
+        m_TargetAssemblyTypeName: TexSwitch, Assembly-CSharp
+        m_MethodName: ChangeThing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1360446084
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11599,6 +11901,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1ab14737bdfda514fbd79a8ebed2d12e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1969846315}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1ab14737bdfda514fbd79a8ebed2d12e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1969846316}
   m_SourcePrefab: {fileID: 100100000, guid: 1ab14737bdfda514fbd79a8ebed2d12e, type: 3}
 --- !u!4 &1969846314 stripped
 Transform:
@@ -11622,6 +11927,21 @@ MonoBehaviour:
   player: {fileID: 264003110}
   mage: {fileID: 0}
   target: {x: 0, y: 0, z: 0}
+--- !u!114 &1969846316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1209579401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dbbe0da930b7f24e9bd6f649a2754e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  texture1: {fileID: 2800000, guid: d066e5a150aa92a43885cfb9f4ed64ae, type: 3}
+  texture2: {fileID: 10307, guid: 0000000000000000f000000000000000, type: 0}
+  useTexture2: 0
 --- !u!1 &1977354336
 GameObject:
   m_ObjectHideFlags: 0
@@ -12003,7 +12323,6 @@ SceneRoots:
   - {fileID: 503295898}
   - {fileID: 1908169000}
   - {fileID: 63166464}
-  - {fileID: 788497368}
   - {fileID: 1280008450}
   - {fileID: 209240408}
   - {fileID: 74644723}
