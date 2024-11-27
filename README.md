@@ -28,4 +28,4 @@ Scrolling: Implimented using the code learned from class and with custom texture
 
 Textures: Made based on our custom models 
 
-![diagram](CG.png)
+![diagram](CG.drawio.png)
