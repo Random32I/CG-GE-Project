@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class TexSwitch : MonoBehaviour
 {
+    // modified version of code from unity.com/t/switching-between-two-textures-using-a-switch-multiple-parts-of-a-model/626209/2
+
     public Texture2D texture1 = null;
     public Texture2D texture2 = null;
 
